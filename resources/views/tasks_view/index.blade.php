@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- contenu de la page -->
-<a href="{{ route('create') }}" class="btn btn-primary">Ajouter une tâche</a>
+<a href="{{ route('task.create') }}" class="btn btn-primary">Ajouter une tâche</a>
 <table class="table">
     <thead>
         <tr>
@@ -25,8 +25,8 @@
                     @endif
                 </td>
                 <td>
-                    <a href="{{ route('edit', $task->id) }}" class="btn btn-info">Modifier</a>
-                    <form action="{{ route('destroy', $task->id) }}" method="post" style="display:inline;">
+                    <a href="{{ route('task.edit', $task->id) }}" class="btn btn-info">Modifier</a>
+                    <form action="{{ route('task.destroy', $task->id) }}" method="post" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"

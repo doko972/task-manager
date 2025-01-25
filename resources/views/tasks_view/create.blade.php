@@ -3,7 +3,7 @@
 @section('content')
 
 <h2>@if(empty($task))Creation @else Modification @endif d'une tâche</h2>
-<form action="{{ empty($task) ? route('store') : route('update', $task->id) }}" method="post">
+<form action="{{ empty($task) ? route('task.store') : route('task.update', $task->id) }}" method="post">
     @csrf
     @if(!empty($task))
     @method('put')
