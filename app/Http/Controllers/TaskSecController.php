@@ -37,7 +37,7 @@ class TaskSecController extends Controller
             'status' => $request->status == "on" ? 1 : 0
         ]);
 
-        return redirect()->route('index')->with('sucess', 'Tache enregisté avec succès');
+        return redirect()->route('index')->with('success', 'Tache enregisté avec succès');
     }
 
     /**
@@ -61,7 +61,7 @@ class TaskSecController extends Controller
             'status' => $request->status == "on" ? 1 : 0
         ]);
 
-        return redirect()->route('index')->with('sucess', 'Tache modifié avec succès');
+        return redirect()->route('index')->with('success', 'Tache modifié avec succès');
     }
 
     /**

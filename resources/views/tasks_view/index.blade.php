@@ -3,6 +3,11 @@
 @section('content')
 <!-- contenu de la page -->
 <a href="{{ route('task.create') }}" class="btn btn-primary">Ajouter une tâche</a>
+
+@if (session('success')) 
+<div class="alert alert-success">{{ session('success') }}</div>
+@endif
+
 <table class="table">
     <thead>
         <tr>
